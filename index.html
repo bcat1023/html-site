@@ -8,8 +8,99 @@
 
 
 
-</body>
 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<button class="accordion">About Us</button>
+<div class="panel">
+  <p>Qweldo Is A Small Company Thats Goal Is To Become A Large TV Network.</p>
+</div>
+
+<button class="accordion">What We Do</button>
+<div class="panel">
+  <p>We Provide Many Resources Such As The Ones Below.</p>
+  <p><a href="https://www.signupgenius.com/go/9040a4fa9a82faafa7-sign" target="_blank">Newsletter</a></p>
+  <p><a href="https://forms.gle/BAX2q9T8nqJT1jr69" target="_blank">PC Suport Ticket Administation</a></p>
+  <p>Look At The Menu Below For More Resources</p>
+</div>
+
+<button class="accordion">Links/Resources</button>
+<div class="panel">
+  <p><a href="http://www.mediafire.com/file/cccgst00gs2uxf2/setup.exe/file" target="blank">Remote Connection Automator</a></p>
+  <p>PC Diognostics(comeing soon)</p>
+  <p><a href="https://www.signupgenius.com/go/9040a4fa9a82faafa7-sign" target="_blank">Subscribe To Newsletter</a></p>
+  <p><a href="https://www.signupgenius.com/go/9040a4fa9a82faafa7-beta" target="_blank">Become A Beta Tester</p></a>
+  <p><a href="https://forms.gle/uaJUxwbSm7T7GSsr8" target="_blank">Unsubscribe To Our Newsletter</p></a>
+  <p><a href="https://foward-test.stackblitz.io/" target="_blank">Contact/Advertize With Us</p></a>
+  <p><a href="https://forms.gle/BAX2q9T8nqJT1jr69" target="_blank">Submit A PC Support Ticket</p></a>
+</div>
+<button class="accordion">News</button>
+<div class="panel">
+  <p>Current News</p>
+  <p>New Company Name. The New Name For Our Company Was Decided To Be Qweldo<br>
+  However The Company Logo Is Still Pending</p>
+  <p>A Brand New Homepage Was Just Relesed On 5/28/2020 At 4:53 PM</p>
+  <p>All Other Pages On Our Site Have Not Yet Been Changed However Are Due For Change</p>
+  <p>If You Are Still Useing https://bit.ly/Bcathomepage to get to this site please note that that url will soon become abondon and no loger work.<br>
+  Please Use https://bit.ly
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
